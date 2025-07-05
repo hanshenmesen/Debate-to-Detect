@@ -113,8 +113,6 @@ MEMORY_KEEP_RECENT = 10            # 保留最近对话数
 FREE_ROUNDS = 1                    # 自由辩论轮次
 ```
 
-## 🔧 自定义配置
-
 ### 添加新的评判维度
 
 在 `config.py`中修改 `DIMENSIONS`字典：
