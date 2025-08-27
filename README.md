@@ -2,51 +2,16 @@
 
 ## 📌 Introduction
 This project implements a **multi-agent debate framework for fake news detection**.  
-The core idea is inspired by "truth emerges from debate":  
+The core idea is inspired by "the truth becomes clearer from debate":  
 - **Affirmative Agents**: always argue that the news is true  
 - **Negative Agents**: always argue that the news is false  
 - **Judge Agents**: evaluate from multiple dimensions (accuracy, source reliability, reasoning consistency, clarity, and ethics), and deliver the final verdict  
 
 Additionally, an **evidence retrieval module** is integrated to automatically extract supporting evidence from Wikipedia, enhancing both reliability and interpretability of the detection results.
 
----
+The code only include simplified prompts for demonstration.
+For achieving more comprehensive results, it is recommended to use stronger models together with more detailed and structured prompts. By enriching prompts with role-specific instructions, evaluation criteria, and constraints, the system can deliver higher reliability, interpretability, and overall performance.
 
-## ⚙️ Architecture
-
-The system consists of the following components:
-
-1. **`agent.py`**  
-   - Defines the `Agent` class that wraps interaction with the OpenAI API.  
-   - Provides memory management (summarization + recent context preservation).  
-   - Supports role-specific prompts (system prompts).  
-
-2. **`config.py`**  
-   - Contains global configuration:  
-     - OpenAI API settings (key, base URL)  
-     - Supported model list  
-     - Memory management (max tokens, summarization threshold)  
-     - Debate phases (Opening, Rebuttal, Free Debate, Closing)  
-     - Judge role settings  
-
-3. **`engine.py`**  
-   - Core `Debate` class that orchestrates the debate workflow:  
-     - Detects the news domain and generates role-specific profiles  
-     - Initializes all role agents (Affirmative, Negative, Judges)  
-     - Runs the debate phases sequentially  
-     - Integrates evidence from Wikipedia during designated stages  
-     - Produces scores, verdict (REAL / FAKE / UNCERTAIN), summary, and transcript  
-   - Results can be saved in `json` or `txt` format.  
-
-4. **`evidence_system.py`**  
-   - Evidence collection module:  
-     - Extracts keywords from news text  
-     - Queries Wikipedia for relevant entries  
-     - Uses `EvidenceEvaluator` to assess whether evidence supports TRUE, FALSE, or is NEUTRAL  
-   - Injects evidence into debate rounds to improve persuasiveness and interpretability.  
-
-5. **`openai_utils.py`**  
-   - Utility functions for token counting and model context limits  
-   - Custom exceptions (e.g., quota exceeded, access terminated).  
 
 ---
 
@@ -109,14 +74,6 @@ A typical `json` output looks like:
   "transcript": [...]
 }
 ```
-
----
-
-## 🧠 Features
-- **Multi-agent structured debate**: enhances interpretability by simulating adversarial reasoning  
-- **Evidence retrieval and stance evaluation**: improves factual reliability with Wikipedia evidence  
-- **Multi-dimensional judge scoring**: evaluates persuasiveness and truthfulness across five independent aspects  
-- **Extensibility**: supports adding more debate rounds, judge dimensions, or swapping different LLMs  
 
 ---
 
