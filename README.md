@@ -1,4 +1,5 @@
-# Debate-to-Detect (D2D)
+# Debate-to-Detect (D2D) 
+Version 2.0 (Evidence-Based)
 
 ## 📌 Introduction
 This project implements a **multi-agent debate framework for fake news detection**.  
