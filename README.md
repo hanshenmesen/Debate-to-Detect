@@ -32,9 +32,6 @@ export OPENAI_API_BASE=""
 ### 3. Run a debate
 Example usage:
 ```python
-from pathlib import Path
-from engine import Debate
-
 news_text = "Apple will release a new quantum computer next year."
 news_path = Path("sample_news.txt")
 
