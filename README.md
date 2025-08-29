@@ -22,18 +22,11 @@ For achieving more comprehensive results, it is recommended to use stronger mode
 pip install -r requirements.txt
 ```
 
-Dependencies include:
-- `openai`
-- `tiktoken`
-- `requests`
-- `backoff`
-- `dataclasses` (built-in for Python 3.7+)
-
 ### 2. Configure environment variables
 Before running, set your OpenAI API parameters:
 ```bash
-export OPENAI_API_KEY="your_api_key_here"
-export OPENAI_API_BASE="https://api.openai.com/v1"
+export OPENAI_API_KEY=""
+export OPENAI_API_BASE=""
 ```
 
 ### 3. Run a debate
