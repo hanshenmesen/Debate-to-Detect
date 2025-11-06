@@ -75,4 +75,4 @@ MIT License
 
 ## 📖 Reference
 This project is associated with the following research paper:  
-[Debate-to-Detect: Reformulating Misinformation Detection as a Real-World Debate with Large Language Models](https://aclanthology.org/2025.emnlp-main.764/)
+[Debate-to-Detect: Reformulating Misinformation Detection as a Real-World Debate with Large Language Models (EMNLP2025)](https://aclanthology.org/2025.emnlp-main.764/)
